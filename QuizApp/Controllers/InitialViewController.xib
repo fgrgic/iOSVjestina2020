@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="InitialViewController" customModule="QuizApp" customModuleProvider="target">
+            <connections>
+                <outlet property="coverImage" destination="SyC-hX-0v4" id="9cL-H6-Rjz"/>
+                <outlet property="funFactLabel" destination="r6Q-Ky-Zac" id="9Sl-9H-iF2"/>
+                <outlet property="questionViewContainer" destination="GQI-xX-Fhc" id="tYL-Of-fpM"/>
+                <outlet property="titleLabel" destination="nPb-LL-NS2" id="OKx-kH-51h"/>
+                <outlet property="view" destination="iN0-l3-epB" id="9i4-5W-xXq"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="sample label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r6Q-Ky-Zac">
+                    <rect key="frame" x="34" y="52" width="307" height="20.333333333333329"/>
+                    <rect key="contentStretch" x="0.0" y="0.0" width="1" height="0.0"/>
+                    <fontDescription key="fontDescription" type="italicSystem" pointSize="17"/>
+                    <color key="textColor" red="0.22292143110000001" green="0.33287811280000001" blue="0.42469304800000002" alpha="0.69999999999999996" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="SyC-hX-0v4">
+                    <rect key="frame" x="0.0" y="195" width="375" height="231"/>
+                    <constraints>
+                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="100" id="VOg-TW-elp"/>
+                        <constraint firstAttribute="height" constant="231" id="ex2-UE-1i3"/>
+                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="320" id="tX9-Ws-awL"/>
+                    </constraints>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OGn-Wp-YZI">
+                    <rect key="frame" x="155" y="110" width="65" height="22"/>
+                    <color key="tintColor" red="0.17983639239999999" green="0.29278916119999998" blue="0.37607461209999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <state key="normal" title="Fetch" image="square.and.arrow.down" catalog="system">
+                        <color key="titleColor" red="0.17983639239999999" green="0.29278916119999998" blue="0.37607461209999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="FetchButtonAction:" destination="-1" eventType="touchUpInside" id="hAB-yW-iJs"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nPb-LL-NS2">
+                    <rect key="frame" x="16" y="158" width="343" height="28.666666666666657"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                    <color key="textColor" red="0.17983639239999999" green="0.29278916119999998" blue="0.37607461209999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GQI-xX-Fhc" customClass="QuestionView" customModule="QuizApp" customModuleProvider="target">
+                    <rect key="frame" x="16" y="434" width="343" height="336"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                </view>
+            </subviews>
+            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+            <constraints>
+                <constraint firstItem="r6Q-Ky-Zac" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="34" id="BFc-SQ-ToV"/>
+                <constraint firstItem="SyC-hX-0v4" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="GbM-da-zS5"/>
+                <constraint firstItem="nPb-LL-NS2" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="WLb-iL-0Zk"/>
+                <constraint firstItem="SyC-hX-0v4" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="Xzx-T5-Nrw"/>
+                <constraint firstItem="OGn-Wp-YZI" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="Z1P-Tk-IyZ"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="nPb-LL-NS2" secondAttribute="trailing" constant="16" id="hSr-if-Alo"/>
+                <constraint firstItem="nPb-LL-NS2" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="114" id="ikS-1N-uBH"/>
+                <constraint firstItem="OGn-Wp-YZI" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="66" id="klc-hP-har"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="r6Q-Ky-Zac" secondAttribute="trailing" constant="34" id="nk7-Wq-WPL"/>
+                <constraint firstItem="SyC-hX-0v4" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="151" id="nlc-Ig-7JM"/>
+                <constraint firstItem="r6Q-Ky-Zac" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="8" id="sJQ-S3-17o"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="136.80000000000001" y="119.70443349753695"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="square.and.arrow.down" catalog="system" width="121" height="128"/>
+    </resources>
+</document>
