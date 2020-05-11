@@ -21,9 +21,11 @@ class QuizService{
                 if let data = data {
                     do {
                         let json = try JSONSerialization.jsonObject(with: data, options: [])
-                        if let jsonDict = json as? [String: Any],
-                            let quizList = jsonDict["quizzes"] as? [Any] {
-                            let quizzes = quizList.compactMap{ Quiz(json: $0) }
+                        
+                        if let respJSON = json as? [String: Any],
+                            let respQuizzes = respJSON["quizzes"] as? [Any] {
+                            let quizzes = respQuizzes.compactMap{ Quiz(json: $0) }
+                            
                             completion(quizzes)
                         } else {
                             completion(nil)

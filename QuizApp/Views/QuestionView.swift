@@ -47,7 +47,6 @@ class QuestionView: UIView {
             return self.currentQuestion
         }
         set(question) {
-            print("i'm here")
             self.currentQuestion = question
             self.questionLabel.text = question.question
             self.answerButtons.enumerated().forEach{

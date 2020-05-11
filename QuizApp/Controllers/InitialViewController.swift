@@ -33,20 +33,36 @@ class InitialViewController: UIViewController {
                     self.setFunFact(quizzes: quizzes)
                     self.setQuizData(quiz: quiz)
                     self.setQuestionData(question: quiz.questions.randomElement()!)
+                    
+                    Toast.show(message: "Fetched", view: self.view, error: false)
+                    self.funFactLabel.isHidden = false;
+                    self.coverImage.isHidden = false;
+                    self.questionViewContainer.isHidden = false;
+                    self.titleLabel.isHidden = false;
                 } else {
-                    print("Server error")
+                    Toast.show(message: "Internal server error", view: self.view, error: true)
+                    self.funFactLabel.isHidden = true;
+                    self.coverImage.isHidden = true;
+                    self.questionViewContainer.isHidden = true;
+                    self.titleLabel.isHidden = true;
                 }
             }
         })
     }
     
-    func setFunFact(quizzes arr: [Quiz]) {
-        // get all questions that contain "NBA" string
-        let NBAQuestionCount = arr.map{$0.questions}.flatMap{$0}.filter{$0.question.contains("NBA")}.count
+    func setQuestionData(question: Question) {
+        self.questionView = QuestionView(
+            frame: CGRect(origin: CGPoint(x: 0, y: 0),
+                          size: self.questionViewContainer.frame.size))
+        if let questionView = self.questionView {
+            self.questionViewContainer.addSubview(questionView)
+        }
         
-        self.funFactLabel.text = "There are \(NBAQuestionCount) questions about NBA in these quizzes"
-        self.funFactLabel.sizeToFit()
+        if let questionView = self.questionView {
+            questionView.question = question
+        }
     }
+    
     
     func setQuizData(quiz: Quiz) {
         titleLabel.text = quiz.title
@@ -62,17 +78,14 @@ class InitialViewController: UIViewController {
         }
     }
     
-    func setQuestionData(question: Question) {
-        self.questionView = QuestionView(
-            frame: CGRect(origin: CGPoint(x: 0, y: 0),
-                          size: self.questionViewContainer.frame.size))
-        print("here,man")
-        if let questionView = self.questionView {
-            self.questionViewContainer.addSubview(questionView)
-        }
+    
+    func setFunFact(quizzes arr: [Quiz]) {
+        // get all questions that contain "NBA" string
+        let NBAQuestionCount = arr.map{$0.questions}.flatMap{$0}.filter{$0.question.contains("NBA")}.count
         
-        if let questionView = self.questionView {
-            questionView.question = question
-        }
+        self.funFactLabel.text = "There are \(NBAQuestionCount) questions about NBA in these quizzes"
+        self.funFactLabel.sizeToFit()
     }
+    
+    
 }

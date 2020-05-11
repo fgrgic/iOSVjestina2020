@@ -17,6 +17,7 @@
 		3C105CEA2469F1DB00D93FE8 /* ImageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C105CE92469F1DB00D93FE8 /* ImageService.swift */; };
 		3C105CED2469F38900D93FE8 /* QuestionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3C105CEC2469F38900D93FE8 /* QuestionView.xib */; };
 		3C105CEF2469F39700D93FE8 /* QuestionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C105CEE2469F39700D93FE8 /* QuestionView.swift */; };
+		3C105CF1246A075700D93FE8 /* Toast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C105CF0246A075700D93FE8 /* Toast.swift */; };
 		3CE9C8CB24691321008C6AF8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CE9C8CA24691321008C6AF8 /* AppDelegate.swift */; };
 		3CE9C8D424691324008C6AF8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3CE9C8D324691324008C6AF8 /* Assets.xcassets */; };
 /* End PBXBuildFile section */
@@ -32,6 +33,7 @@
 		3C105CE92469F1DB00D93FE8 /* ImageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageService.swift; sourceTree = "<group>"; };
 		3C105CEC2469F38900D93FE8 /* QuestionView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = QuestionView.xib; sourceTree = "<group>"; };
 		3C105CEE2469F39700D93FE8 /* QuestionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionView.swift; sourceTree = "<group>"; };
+		3C105CF0246A075700D93FE8 /* Toast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Toast.swift; sourceTree = "<group>"; };
 		3CE9C8C724691321008C6AF8 /* QuizApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QuizApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3CE9C8CA24691321008C6AF8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3CE9C8D324691324008C6AF8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -113,6 +115,7 @@
 				3C105CDD2469DC8700D93FE8 /* SceneDelegate.swift */,
 				3CE9C8D824691324008C6AF8 /* Info.plist */,
 				3CE9C8D324691324008C6AF8 /* Assets.xcassets */,
+				3C105CF0246A075700D93FE8 /* Toast.swift */,
 			);
 			path = QuizApp;
 			sourceTree = "<group>";
@@ -195,6 +198,7 @@
 				3C105CE62469E39200D93FE8 /* Question.swift in Sources */,
 				3C105CE12469E2F000D93FE8 /* QuizService.swift in Sources */,
 				3C105CDE2469DC8700D93FE8 /* SceneDelegate.swift in Sources */,
+				3C105CF1246A075700D93FE8 /* Toast.swift in Sources */,
 				3C105CEF2469F39700D93FE8 /* QuestionView.swift in Sources */,
 				3C105CE82469E3A100D93FE8 /* Category.swift in Sources */,
 			);
